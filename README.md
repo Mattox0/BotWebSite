@@ -1,2 +1,2 @@
 # BotWebSite
-Projet Symphony, site web d'un bot discord
+Symphony Project, website for a Dicord bot
