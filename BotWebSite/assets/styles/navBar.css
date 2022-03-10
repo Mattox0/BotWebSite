@@ -1,0 +1,12 @@
+#nav {
+    padding-top: -1em;
+    border-radius: 0;
+    border-bottom-left-radius: 25;
+    border-bottom-right-radius: 25;
+}
+
+.text {
+    font-weight: bolder;
+    font-size: 20;
+    color:blue;
+}

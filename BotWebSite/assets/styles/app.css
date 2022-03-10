@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: lightgray;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.title_header {
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 3rem;
+}
+
