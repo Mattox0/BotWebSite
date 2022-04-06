@@ -4,20 +4,38 @@
 
 
 <header>
-    <div class="ui container">
-        <div class="ui two column centered grid">
-            <div class="">
-                <img class="rounded-full border-8 border-teal-800" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
-                <h1 class="title_header"> Toutes les fonctionnalitées de LMT-Bot </h1>
-                
-            </div>
-        </div>
-    </div>
 </header>
-<h1> Exemples d'utilisation </h1>
-{# VIDEO 1 #}
+<body>
+    <div class="">
+        <img class="rounded-full border-8 border-teal-800" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
+        <h1 class="title_header text-center">Commandes</h1>
+        
+    </div>
+    <div class="grid grid-cols-10 gap-4 border">
+        <div class="col-start-3 text-xl col-end-5 col-span-4 border categories">
+            <button class="btn block w-full selected" id="all">All</button>
+            <button class="btn block w-full" id="setup">Setup</button>
+            <button class="btn block w-full" id="disable">Disable</button>
+            <button class="btn block w-full" id="social">Social</button>
+            <button class="btn block w-full" id="animaux">Animaux</button>
+            <button class="btn block w-full" id="activitees">Activitées</button>
+            <button class="btn block w-full" id="jeux">Jeux</button>
+            <button class="btn block w-full" id="image">Image</button>
+            <button class="btn block w-full" id="moderation">Modération</button>
+            <button class="btn block w-full" id="fun">Fun</button>
+            <button class="btn block w-full" id="utiles">Utiles</button>
+        </div>
+        <div class="col-start-5 col-end-9 col-span-4 border">
+            {% for detail in details %}
+                <div class="command {{ detail.categorie }}">
+                    <p> {{ detail.command }} -  </p>
+                    <p> - {{ detail.description }} </p>
+                    <p> Usage : {{ detail.usage }} </p>
+                </div>
+            {% endfor %}
+        </div>
 
+    </div>
+</body>
 
-
-{# Preparer les vidéos que on va présenter + les textes pour la prochaine fois #}
 {% endblock %}

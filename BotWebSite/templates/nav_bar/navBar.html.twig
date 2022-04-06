@@ -7,23 +7,30 @@
         </div>
 
         <div class="flex-none">
-            <div class="flex justify-center content-end flex-shrink-0 text-white mr-6">
+            <div class="flex justify-center content-end text-white">
                 <a  href="/home">
-                    <img class="rounded-full" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
+                    <img class="rounded-full border" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
                 </a>
             </div>
         </div>
         
-        <div class="text-2xl justify-end w-full block lg:flex lg:items-center lg:w-auto">
+        <div class="text-2xl justify-end w-full block lg:flex lg:items-center lg:w-auto ml-15">
             <a href="dashboard" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
                 Dashboard
             </a>
             <a href="commands" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
                 Commandes
             </a>
-            <a href="login" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
-                Connexion
-            </a>
+            
+            {% if (name != "") %}
+                <a href="profil" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+                    {{ name }}
+                </a>
+            {% else %}
+                <a href="login" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+                    Connexion
+                </a>
+            {% endif %}
             <a href="faq" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
                 
             </a>

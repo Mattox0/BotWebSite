@@ -1,0 +1,21 @@
+.categories {
+    width: 100%;
+    padding: 1em;
+    background-color: #212121;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 39%);
+    justify-content: center;
+}
+
+.btn {
+    background-color: #303030;
+    border-color: transparent;
+    color: #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.btn.selected {
+    background-color: #7289da;
+    color: #fff;
+}

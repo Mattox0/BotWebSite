@@ -10,6 +10,12 @@ class CommandsController extends AbstractController{
     
     #[Route('/commands', name: 'app_commands')]
     public function index() : Response {
-        return $this->render("site/commands.html.twig");
+        $filedata = file_get_contents('./commands.json');
+        $details = json_decode($filedata);
+        // var_dump($details);
+
+        return $this->render("site/commands.html.twig", [
+            // 'details' => $details,
+        ]);
     }
 }

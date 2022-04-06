@@ -14,7 +14,9 @@
         {% endblock %}
     </head>
     <body class="bg-[#404EED]">
-        {% include 'nav_bar/navBar.html.twig' %}
+        {{ render(controller(
+            'App\\Controller\\NavBarController::index',
+        )) }}
         {% block body %}{% endblock %}
     </body>
 </html>

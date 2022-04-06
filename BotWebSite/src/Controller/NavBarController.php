@@ -11,8 +11,17 @@ class NavBarController extends AbstractController
     #[Route('/nav/bar', name: 'nav_bar')]
     public function index(): Response
     {
-        return $this->render('nav_bar/index.html.twig', [
+        $user = $this->getUser();
+        if ($user != null){
+            $name = $user->getUsername(); 
+        }else{
+            $name = "";
+        }
+        $test = "bleu";
+        return $this->render('nav_bar/navBar.html.twig', [
             'controller_name' => 'NavBarController',
+            'name' => $name,
+            "test" => $test,
         ]);
     }
 }
