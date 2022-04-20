@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CommandRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,13 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class CommandsController extends AbstractController{
     
     #[Route('/commands', name: 'app_commands')]
-    public function index() : Response {
-        $filedata = file_get_contents('./commands.json');
-        $details = json_decode($filedata);
-        // var_dump($details);
-
+    public function index(CommandRepository $commands) : Response {
+        $commands = $commands->findAll();
         return $this->render("site/commands.html.twig", [
-            // 'details' => $details,
+            'commands' => $commands,
         ]);
     }
 }

@@ -5,6 +5,7 @@
     border-radius: 4px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 39%);
     justify-content: center;
+    height: fit-content;
 }
 
 .btn {
@@ -18,4 +19,49 @@
 .btn.selected {
     background-color: #7289da;
     color: #fff;
+}
+
+.command {
+    width: 100%;
+    padding: 1em;
+    background-color: #212121;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 39%);
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.cmd {
+    color:#fff;
+}
+
+.description {
+    color: #6c757d;
+    display: flex;
+    margin-left: 5px;
+}
+
+.basic {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    color:#fff;
+    justify-content: center;
+}
+
+.header {
+    margin: -2px 0 -12px;
+    font-size: 55px;
+    color: #cd6e57;
+    font-family: "Uni Sans","Arial",sans-serif;
+}
+
+.rouge {
+    color: #cd6e57;
 }

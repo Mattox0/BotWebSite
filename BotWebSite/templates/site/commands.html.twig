@@ -4,38 +4,44 @@
 
 
 <header>
+    <script src="{{ asset('js/commands.js') }}"></script>
 </header>
 <body>
     <div class="">
         <img class="rounded-full border-8 border-teal-800" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
-        <h1 class="title_header text-center">Commandes</h1>
+        <h1 class="header">Commandes</h1>
         
     </div>
     <div class="grid grid-cols-10 gap-4 border">
         <div class="col-start-3 text-xl col-end-5 col-span-4 border categories">
-            <button class="btn block w-full selected" id="all">All</button>
-            <button class="btn block w-full" id="setup">Setup</button>
-            <button class="btn block w-full" id="disable">Disable</button>
-            <button class="btn block w-full" id="social">Social</button>
-            <button class="btn block w-full" id="animaux">Animaux</button>
-            <button class="btn block w-full" id="activitees">Activitées</button>
-            <button class="btn block w-full" id="jeux">Jeux</button>
-            <button class="btn block w-full" id="image">Image</button>
-            <button class="btn block w-full" id="moderation">Modération</button>
-            <button class="btn block w-full" id="fun">Fun</button>
-            <button class="btn block w-full" id="utiles">Utiles</button>
+            <button class="categorie btn block w-full selected" id="all">All</button>
+            <button class="categorie btn block w-full" id="setup">Setup</button>
+            <button class="categorie btn block w-full" id="disable">Disable</button>
+            <button class="categorie btn block w-full" id="social">Social</button>
+            <button class="categorie btn block w-full" id="animaux">Animaux</button>
+            <button class="categorie btn block w-full" id="activitees">Activitées</button>
+            <button class="categorie btn block w-full" id="jeux">Jeux</button>
+            <button class="categorie btn block w-full" id="image">Image</button>
+            <button class="categorie btn block w-full" id="modération">Modération</button>
+            <button class="categorie btn block w-full" id="fun">Fun</button>
+            <button class="categorie btn block w-full" id="utile">Utiles</button>
         </div>
         <div class="col-start-5 col-end-9 col-span-4 border">
-            {% for detail in details %}
-                <div class="command {{ detail.categorie }}">
-                    <p> {{ detail.command }} -  </p>
-                    <p> - {{ detail.description }} </p>
-                    <p> Usage : {{ detail.usage }} </p>
+            {% for item in commands %}
+                <div class="command {{ item.category }}">
+                    <div class="basic">
+                        <p class="cmd">{{ item.name }}</p>
+                        <p class="description">- {{ item.description }} </p>
+                    </div> 
+                    <div class="infos">
+                        <p class="hidden"> Utilisation : <code>{{ item.example }}</code> </p>
+                    </div>
                 </div>
             {% endfor %}
         </div>
 
     </div>
 </body>
+
 
 {% endblock %}
