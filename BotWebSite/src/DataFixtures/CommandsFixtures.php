@@ -20,6 +20,7 @@ class CommandsFixtures extends Fixture
                 $command->setName($cmdN);
                 $command->setDescription($cmd['description']);
                 $command->setExample($cmd['usage']);
+                $command->setHidden($cmd['hidden']);
                 $manager->persist($command);
             }
         }

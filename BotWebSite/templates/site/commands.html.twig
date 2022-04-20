@@ -7,28 +7,28 @@
     <script src="{{ asset('js/commands.js') }}"></script>
 </header>
 <body>
-    <div class="">
-        <img class="rounded-full border-8 border-teal-800" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
-        <h1 class="header">Commandes</h1>
-        
+    <div class="">        
+        <h1 class="header">COMMANDES</h1>
     </div>
-    <div class="grid grid-cols-10 gap-4 border">
-        <div class="col-start-3 text-xl col-end-5 col-span-4 border categories">
-            <button class="categorie btn block w-full selected" id="all">All</button>
-            <button class="categorie btn block w-full" id="setup">Setup</button>
-            <button class="categorie btn block w-full" id="disable">Disable</button>
-            <button class="categorie btn block w-full" id="social">Social</button>
-            <button class="categorie btn block w-full" id="animaux">Animaux</button>
-            <button class="categorie btn block w-full" id="activitees">Activitées</button>
-            <button class="categorie btn block w-full" id="jeux">Jeux</button>
-            <button class="categorie btn block w-full" id="image">Image</button>
-            <button class="categorie btn block w-full" id="modération">Modération</button>
-            <button class="categorie btn block w-full" id="fun">Fun</button>
-            <button class="categorie btn block w-full" id="utile">Utiles</button>
+    <div class="grid grid-cols-10 gap-4">
+        <div class="col-start-3 text-xl col-end-5 col-span-4 categories">
+            <div class="">
+                <button class="categorie btn block w-full selected" id="all">All</button>
+                <button class="categorie btn block w-full" id="setup">Setup</button>
+                <button class="categorie btn block w-full" id="disable">Disable</button>
+                <button class="categorie btn block w-full" id="social">Social</button>
+                <button class="categorie btn block w-full" id="animaux">Animaux</button>
+                <button class="categorie btn block w-full" id="activitees">Activitées</button>
+                <button class="categorie btn block w-full" id="jeux">Jeux</button>
+                <button class="categorie btn block w-full" id="image">Image</button>
+                <button class="categorie btn block w-full" id="modération">Modération</button>
+                <button class="categorie btn block w-full" id="fun">Fun</button>
+                <button class="categorie btn block w-full" id="utile">Utiles</button>
+            </div>
         </div>
-        <div class="col-start-5 col-end-9 col-span-4 border">
+        <div class="col-start-5 col-end-9 col-span-4">
             {% for item in commands %}
-                <div class="command {{ item.category }}">
+                <div class="command {{ item.category }} {% if item.hidden == false %} hidden {% endif %}">
                     <div class="basic">
                         <p class="cmd">{{ item.name }}</p>
                         <p class="description">- {{ item.description }} </p>
@@ -39,7 +39,10 @@
                 </div>
             {% endfor %}
         </div>
-
+        <div class="col-start-9 col-end-11">
+            <button class="btn pagination" id="prev"> Prev </button>
+            <button class="btn pagination" id="next"> Next </button>
+        </div>
     </div>
 </body>
 

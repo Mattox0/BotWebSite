@@ -25,6 +25,9 @@ class Command
     #[ORM\Column(type: 'text')]
     private $example;
 
+    #[ORM\Column(type: 'boolean')]
+    private $hidden;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,18 @@ class Command
     public function setExample(string $example): self
     {
         $this->example = $example;
+
+        return $this;
+    }
+
+    public function getHidden(): ?bool
+    {
+        return $this->hidden;
+    }
+
+    public function setHidden(bool $hidden): self
+    {
+        $this->hidden = $hidden;
 
         return $this;
     }

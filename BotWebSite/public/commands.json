@@ -1,0 +1,797 @@
+{
+    "setup": {
+        "/setup infos" : {
+            "description" : "Un résumé des systèmes activés ou non dans votre serveur",
+            "usage" : "/setup infos",
+            "hidden" : true
+        },
+        "/setup anniversaire": {
+            "description" : "Un système d'anniversaire complet",
+            "usage" : "/setup anniversaire",
+            "hidden" : true
+        },
+        "/setup bumps": {
+            "description" : "Un classement des bumps (avec Disboard)",
+            "usage" : "/setup bumps",
+            "hidden" : true
+        },
+        "/setup logs": {
+            "description" : "Un système de logs avec choix des parametres",
+            "usage" : "/setup logs",
+            "hidden" : true
+        },
+        "/setup prison" : {
+            "description" : "Un système de prison pour aider à la modération",
+            "usage" : "/setup prison",
+            "hidden" : true
+        },
+        "/setup privateroom" : {
+            "description" : "Un système de salons vocaux personalisés",
+            "usage" : "/setup privateroom",
+            "hidden" : true
+        },
+        "/setup stats" : {
+            "description" : "Un système de comptage de membres",
+            "usage" : "/setup stats",
+            "hidden" : true
+        },
+        "/setup suggestion" : {
+            "description" : "Un système de suggestions",
+            "usage" : "/setup suggestion",
+            "hidden" : true
+        },
+        "/setup ticket" : {
+            "description" : "Un système de tickets",
+            "usage" : "/setup ticket",
+            "hidden" : true
+        }
+    },
+    "disable" : {
+        "/disable anniversaire": {
+            "description" : "Désactive le système d'anniversaire",
+            "usage" : "/disable anniversaire",
+            "hidden" : true
+        },
+        "/disable bumps": {
+            "description" : "Désactive le comptage et le classement des bumps",
+            "usage" : "/disable bumps",
+            "hidden" : false
+        },
+        "/disable logs": {
+            "description" : "Désactive le système de logs",
+            "usage" : "/disable logs",
+            "hidden" : false
+        },
+        "/disable prison" : {
+            "description" : "Désactive le système de prison",
+            "usage" : "/disable prison",
+            "hidden" : false
+        },
+        "/disable privateroom" : {
+            "description" : "Désactive le système de salons vocaux personalisé",
+            "usage" : "/disable privateroom",
+            "hidden" : false
+        },
+        "/disable stats" : {
+            "description" : "Désactive le système de comptage de membres",
+            "usage" : "/disable stats",
+            "hidden" : false
+        },
+        "/disable suggestion" : {
+            "description" : "Désactive le système de suggestions",
+            "usage" : "/disable suggestion",
+            "hidden" : false
+        },
+        "/disable ticket" : {
+            "description" : "Désactive le système de ticket",
+            "usage" : "/disable ticket",
+            "hidden" : false
+        }
+    },
+    "social" : {
+        "/bite" : {
+            "description" : "Pour mordre quelqu'un",
+            "usage" : "/bite <user>",
+            "hidden" : false
+        },
+        "/blush" : {
+            "description" : "Te fait rougir",
+            "usage" : "/blush",
+            "hidden" : false
+        },
+        "/bully" : {
+            "description" : "Intimide quelqu'un",
+            "usage" : "/bully <user>",
+            "hidden" : false
+        },
+        "/cry" : {
+            "description" : "Pleure auprès de quelqu'un",
+            "usage" : "/cry <user>",
+            "hidden" : false
+        },
+        "/dance" : {
+            "description" : "Danse avec quelqu'un",
+            "usage" : "/dance <user>",
+            "hidden" : false
+        },
+        "/glomp" : {
+            "description" : "Glousse",
+            "usage" : "/glomp",
+            "hidden" : false
+        },
+        "/handhold" : {
+            "description" : "Serre la main de quelqu'un",
+            "usage" : "/handhold <user>",
+            "hidden" : false
+        },
+        "/happy" : {
+            "description" : "Sois content",
+            "usage" : "/happy",
+            "hidden" : false
+        },
+        "/hug" : {
+            "description" : "Fais un calin a quelqu'un",
+            "usage" : "/huh <user>",
+            "hidden" : false
+        },
+        "/kill" : {
+            "description" : "Tue quelqu'un",
+            "usage" : "/kill <user>",
+            "hidden" : false
+        },
+        "/pat" : {
+            "description" : "Réconforte quelqu'un",
+            "usage" : "/pat <user>",
+            "hidden" : false
+        },
+        "/kiss" : {
+            "description" : "Embrasse quelqu'un",
+            "usage" : "/kiss <user>",
+            "hidden" : false
+        },
+        "/poke" : {
+            "description" : "Donne un petit coup à quelqu'un",
+            "usage" : "/poke <user>",
+            "hidden" : false
+        },
+        "/slap" : {
+            "description" : "Donne une gifle à quelqu'un",
+            "usage" : "/slap <user>",
+            "hidden" : false
+        },
+        "/smile" : {
+            "description" : "Sourit",
+            "usage" : "/smile",
+            "hidden" : false
+        },
+        "/wave" : {
+            "description" : "Salue quelqu'un",
+            "usage" : "/wave <user>",
+            "hidden" : false
+        },
+        "/wink" : {
+            "description" : "Fait un clin d'oeil à quelqu'un",
+            "usage" : "/wave <user>",
+            "hidden" : false
+        },
+        "/yeet" : {
+            "description" : "Donne un coup de pied à quelqu'un",
+            "usage" : "/yeet <user>",
+            "hidden" : false
+        }
+    },
+    "animaux" : {
+        "/animals axolot" : {
+            "description" : "Affiche un axolot",
+            "usage" : "/animals axolot",
+            "hidden" : false
+        },
+        "/animals dog" : {
+            "description" : "Affiche un chien",
+            "usage" : "/animals dog",
+            "hidden" : false
+        },
+        "/animals fox" : {
+            "description" : "Affiche un renard",
+            "usage" : "/animals fox",
+            "hidden" : false
+        },
+        "/animals panda" : {
+            "description" : "Affiche un panda",
+            "usage" : "/animals panda",
+            "hidden" : false
+        },
+        "/animals bird" : {
+            "description" : "Affiche un oiseau",
+            "usage" : "/animals bird",
+            "hidden" : false
+        },
+        "/animals bunny" : {
+            "description" : "Affiche un lapin",
+            "usage" : "/animals bunny",
+            "hidden" : false
+        },
+        "/animals cat" : {
+            "description" : "Affiche un chat",
+            "usage" : "/animals cat",
+            "hidden" : false
+        },
+        "/animals duck" : {
+            "description" : "Affiche un canard",
+            "usage" : "/animals duck",
+            "hidden" : false
+        },
+        "/animals elephant" : {
+            "description" : "Affiche un éléphant",
+            "usage" : "/animals elephant",
+            "hidden" : false
+        },
+        "/animals kangourou" : {
+            "description" : "Affiche un kangourou",
+            "usage" : "/animals kangourou",
+            "hidden" : false
+        },
+        "/animals koala" : {
+            "description" : "Affiche un koala",
+            "usage" : "/animals koala",
+            "hidden" : false
+        },
+        "/animals lizard" : {
+            "description" : "Affiche un reptile",
+            "usage" : "/animals lizard",
+            "hidden" : false
+        },
+        "/animals raccoon" : {
+            "description" : "Affiche un raton laveur",
+            "usage" : "/animals raccoon",
+            "hidden" : false
+        },
+        "/animals redpanda" : {
+            "description" : "Affiche un panda roux",
+            "usage" : "/animals redpanda",
+            "hidden" : false
+        }
+    },
+    "activitees" : {
+        "/activity youtube" : {
+            "description" : "Lance l'activité Youtube Together",
+            "usage" : "/activity youtube",
+            "hidden" : false
+        },
+        "/activity awkword" : {
+            "description" : "Lance l'activité Awkword",
+            "usage" : "/activity awkword",
+            "hidden" : false
+        },
+        "/activity betrayal" : {
+            "description" : "Lance l'activité Betrayal",
+            "usage" : "/activity betrayal",
+            "hidden" : false
+        },
+        "/activity checkers" : {
+            "description" : "Lance l'activité Checkers",
+            "usage" : "/activity checkers",
+            "hidden" : false
+        },
+        "/activity chess" : {
+            "description" : "Lance l'activité Chess",
+            "usage" : "/activity chess",
+            "hidden" : false
+        },
+        "/activity doodlecrew" : {
+            "description" : "Lance l'activité Doodlecrew",
+            "usage" : "/activity doodlecrew",
+            "hidden" : false
+        },
+        "/activity fishing" : {
+            "description" : "Lance l'activité Fishing",
+            "usage" : "/activity fishing",
+            "hidden" : false
+        },
+        "/activity lettertile" : {
+            "description" : "Lance l'activité Lettertile",
+            "usage" : "/activity lettertile",
+            "hidden" : false
+        },
+        "/activity poker" : {
+            "description" : "Lance l'activité Poker",
+            "usage" : "/activity poker",
+            "hidden" : false
+        },
+        "/activity puttparty" : {
+            "description" : "Lance l'activité Puttparty",
+            "usage" : "/activity puttparty",
+            "hidden" : false
+        },
+        "/activity sketchyartists" : {
+            "description" : "Lance l'activité Sketchyartists",
+            "usage" : "/activity sketchyartists",
+            "hidden" : false
+        },
+        "/activity spellcast" : {
+            "description" : "Lance l'activité Spellcast",
+            "usage" : "/activity spellcast",
+            "hidden" : false
+        },
+        "/activity wordsnack" : {
+            "description" : "Lance l'activité Wordsnack",
+            "usage" : "/activity wordsnack",
+            "hidden" : false
+        }
+    },
+    "jeux" : {
+        "/duel" : {
+            "description" : "Lance un duel avec quelqu'un",
+            "usage" : "/duel <user>",
+            "hidden" : false
+        },
+        "/pendu" : {
+            "description" : "Lance le jeu du pendu en groupe ou en solo",
+            "usage" : "/pendu",
+            "hidden" : false
+        },
+        "/fasttype" : {
+            "description" : "Lance le jeu du fasttype en groupe ou en solo",
+            "usage" : "/fasttype",
+            "hidden" : false
+        },
+        "/memory" : {
+            "description" : "Lance une partie de memory",
+            "usage" : "/memory",
+            "hidden" : false
+        },
+        "/morpion" : {
+            "description" : "Lance une partei de morpion avec quelqu'un",
+            "usage" : "/morpion <user>",
+            "hidden" : false
+        },
+        "/puissance4" : {
+            "description" : "Lance une partie de puissance 4 avec quelqu'un",
+            "usage" : "/puissance4 <user>",
+            "hidden" : false
+        },
+        "/rps" : {
+            "description" : "Lance un jeu de pierre feuille ciseaux avec quelqu'un ou en solo",
+            "usage" : "/rps <user> | /rps",
+            "hidden" : false
+        },
+        "/akinator" : {
+            "description" : "Lance une partie d'Akinator",
+            "usage" : "/akinator",
+            "hidden" : false
+        }
+    },
+    "image" : {
+        "/blurp" : {
+            "description" : "Brouille l'image de soi ou de quelqu'un",
+            "usage" : "/blurp <user> | /blurp",
+            "hidden" : false
+        },
+        "/changemymind" : {
+            "description" : "Invoque un \"Change my mind !\" avec le texte de votre choix",
+            "usage" : "/changemymind <text>",
+            "hidden" : false
+        },
+        "/color" : {
+            "description" : "Affiche les informations d'une couleur avec un code hexadécimal",
+            "usage" : "/color <hex>",
+            "hidden" : false
+        },
+        "/gay" : {
+            "description" : "Convertis sa photo de profile ou celle de quelqu'un",
+            "usage" : "/gay <user> | /gay",
+            "hidden" : false
+        },
+        "/jail" : {
+            "description" : "Met en prison la photo de soi ou de quelqu'un",
+            "usage" : "/jail <user> | /jail",
+            "hidden" : false
+        },
+        "/mission" : {
+            "description" : "Change la photo de profil de soi ou de quelqu'un",
+            "usage" : "/mission <user> | /mission",
+            "hidden" : false
+        },
+        "/nasa" : {
+            "description" : "Invoque la photo quotidienne de la nasa",
+            "usage" : "/nasa",
+            "hidden" : false
+        },
+        "/pixelate" : {
+            "description" : "Pixelate l'image de profil soi ou de quelqu'un",
+            "usage" : "/pixelate <user> | /pixelate",
+            "hidden" : false
+        },
+        "/stickbug" : {
+            "description" : "Invoque un stickbug de soi ou de quelqu'un",
+            "usage" : "/stickbug <user> | /stickbug",
+            "hidden" : false
+        },
+        "/tweet": {
+            "description" : "Cree un faux tweet twitter avec le texte de votre choix",
+            "usage" : "/tweet <text>",
+            "hidden" : false
+        },
+        "/wasted" : {
+            "description" : "Cree une image \"wasted\" de la photo de profil de soi ou de quelqu'un",
+            "usage" : "/wasted <user> | /wasted",
+            "hidden" : false
+        },
+        "ytbcomment" : {
+            "description" : "Cree un faux commentaire youtube avec sa photo de profil",
+            "usage" : "/ytbcomment <text>",
+            "hidden" : false
+        }
+    },
+    "modération" : {
+        "/ban" : {
+            "description" : "Bannit un utilisateur",
+            "usage" : "/ban <user>",
+            "hidden" : false
+        },
+        "/unban" : {
+            "description" : "Debannit un utilisateur",
+            "usage" : "/unban <userID>",
+            "hidden" : false
+        },
+        "/mute" : {
+            "description" : "Mute un utilisateur",
+            "usage" : "/mute <user>",
+            "hidden" : false
+        },
+        "/unmute" : {
+            "description" : "Démute un utilisateur",
+            "usage" : "/unmute <user>",
+            "hidden" : false
+        },
+        "/banlist" : {
+            "description" : "Affiche la liste des utilisateurs bannis",
+            "usage" : "/banlist",
+            "hidden" : false
+        },
+        "/clear" : {
+            "description" : "Efface le nombre de messages indiqué",
+            "usage" : "/clear <number>",
+            "hidden" : false
+        },
+        "/lock" : {
+            "description" : "Verrouille un salon",
+            "usage" : "/lock <channel>",
+            "hidden" : false
+        },
+        "/unlock" : {
+            "description" : "Déverrouille un salon",
+            "usage" : "/unlock <channel>",
+            "hidden" : false
+        },
+        "/prison" : {
+            "description" : "Met un prison un utilisateur en clonant le channel",
+            "usage" : "/prison <user>",
+            "hidden" : false
+        },
+        "/addprison" : {
+            "description" : "Ajoute un utilisateur à la prison",
+            "usage" : "/addprison <user>",
+            "hidden" : false
+        },
+        "/liberate" : {
+            "description" : "Libère un utilisateur de la prison",
+            "usage" : "/liberate <user>",
+            "hidden" : false
+        },
+        "/slowmode" : {
+            "description" : "Règle le slowmode d'un salon",
+            "usage" : "/slowmode <temp> <channek>",
+            "hidden" : false
+        },
+        "/warn user add" : {
+            "description" : "Ajoute un avertissement à un utilisateur",
+            "usage" : "/warn user add <user>",
+            "hidden" : false
+        },
+        "/warn user remove" : {
+            "description" : "Enlève un avertissement à un utilisateur",
+            "usage" : "/warn user remove <user>",
+            "hidden" : false
+        },
+        "/warn clear user" : {
+            "description" : "Efface les avertissement d'un utilisateur",
+            "usage" : "/warn clear user <user>",
+            "hidden" : false
+        },
+        "/warn clear all" : {
+            "description" : "Efface tous les avertissements",
+            "usage" : "/warn clear all",
+            "hidden" : false
+        },
+        "/warn list user" : {
+            "description" : "Affiche tous les avertissement d'un utilisateur",
+            "usage" : "/warn list user <user>",
+            "hidden" : false
+        },
+        "/warn list all" : {
+            "description" : "Affiche tous les avertissements du serveur",
+            "usage" : "/warn list all",
+            "hidden" : false
+        }
+    },
+    "fun" : {
+        "/8ball" : {
+            "description" : "Lance une question avec la réponse de la magic 8 ball",
+            "usage" : "/8ball <question>",
+            "hidden" : false
+        },
+        "/achievement" : {
+            "description" : "Affiche un achievement minecraft",
+            "usage" : "/achievement <name>",
+            "hidden" : false
+        },
+        "/anime" : {
+            "description" : "Affiche les informations d'un animé",
+            "usage" : "/anime <name>",
+            "hidden" : false
+        },
+        "/ascii" : {
+            "description" : "Affiche un texte en format ascii",
+            "usage" : "/ascii <text>",
+            "hidden" : false
+        },
+        "/commit" : {
+            "description" : "Invente un nom de commit {Developper}",
+            "usage" : "/commit",
+            "hidden" : false
+        },
+        "/emogify" : {
+            "description" : "Traduit votre texte en format emoji",
+            "usage" : "/emogify <text>",
+            "hidden" : false
+        },
+        "/hack" : {
+            "description" : "Permet d'hacker un ami",
+            "usage" : "/hack <user>",
+            "hidden" : false
+        },
+        "/lovecalc" : {
+            "description" : "Calcule l'amour entre vous et quelqu'un d'autre",
+            "usage" : "/lovecalc <user1> <user2> | /lovecalc <user>",
+            "hidden" : false
+        },
+        "/mcskin" : {
+            "description" : "Affiche les informations d'un compte minecraft",
+            "usage" : "/mcskin <name>",
+            "hidden" : false
+        },
+        "/pof" : {
+            "description" : "Pile ou face ?",
+            "usage" : "/pof",
+            "hidden" : false
+        },
+        "/pokefusion" : {
+            "description" : "Invoque une fusion de deux pokémons",
+            "usage" : "/pokefusion",
+            "hidden" : false
+        },
+        "/quote" : {
+            "description" : "Invoque une citation issue d'un animé",
+            "usage" : "/quote",
+            "hidden" : false
+        },
+        "/roulette" : {
+            "description" : "Lance une roulette avec vos amis",
+            "usage" : "/roulette",
+            "hidden" : false
+        },
+        "/tierlist" : {
+            "description" : "Cree une tierlist aléatoire",
+            "usage" : "/tierlist <liste>",
+            "hidden" : false
+        },
+        "/xkcd" : {
+            "description" : "Affiche une image de xkcd",
+            "usage" : "/xkcd",
+            "hidden" : false
+        },
+        "/rate something" : {
+            "description" : "Note n'importe quoi",
+            "usage" : "/rate something <text>",
+            "hidden" : false
+        },
+        "/rate user" : {
+            "description" : "Note un utilisateur",
+            "usage" : "/rate user <user>",
+            "hidden" : false
+        }
+    },
+    "utile" : {
+        "/userinfo" : {
+            "description" : "Affiche les informations de soi ou d'un utilisateur",
+            "usage" : "/userinfo <user> | /userinfo",
+            "hidden" : false
+        },
+        "/serverinfo" : {
+            "description" : "Affiche les informations du serveur",
+            "usage" : "/serverinfo",
+            "hidden" : false
+        },
+        "/pp" : {
+            "description" : "Affiche l'avatar de soi ou d'un utilisateur",
+            "usage" : "/pp <user> | /pp",
+            "hidden" : false
+        },
+        "/translate" : {
+            "description" : "Traduit un texte",
+            "usage" : "/translate <from> <to> <text>",
+            "hidden" : false
+        },
+        "/sugg" : {
+            "description" : "Envoie un suggestion",
+            "usage" : "/sugg <text>",
+            "hidden" : false
+        },
+        "/rappel" : {
+            "description" : "Crée un rappel",
+            "usage" : "/rappel <time> <raison>",
+            "hidden" : false
+        },
+        "/meteo" : {
+            "description" : "Affiche la météo d'une ville",
+            "usage" : "/meteo <ville>",
+            "hidden" : false
+        },
+        "/poll" : {
+            "description" : "Crée un sondage avec les question réponses de votre choix",
+            "usage" : "/poll <question> <reponse1> <reponse2> <reponse3> ..etc",
+            "hidden" : false
+        },
+        "/id" : {
+            "description" : "Affiche l'id d'un utilisateur",
+            "usage" : "/id <user> | /id",
+            "hidden" : false
+        },
+        "/help" : {
+            "description" : "Affiche la liste des commandes",
+            "usage" : "/help",
+            "hidden" : false
+        },
+        "/count" : {
+            "description" : "Compte le nombre de caractere dans une phrase",
+            "usage" : "/count <text>",
+            "hidden" : false
+        },
+        "/calc" : {
+            "description" : "Calcule une expression mathématique",
+            "usage" : "/calc <expression>",
+            "hidden" : false
+        },
+        "/bumps" : {
+            "description" : "Affiche le classement de bumps",
+            "usage" : "/bumps",
+            "hidden" : false
+        },
+        "/profile edit" : {
+            "description" : "Edite ta page de profile",
+            "usage" : "/profile edit",
+            "hidden" : false
+        },
+        "/profile view" : {
+            "description" : "Affiche ta page de profile",
+            "usage" : "/profile view <user> | /profile view",
+            "hidden" : false
+        },
+        "/steam random" : {
+            "description" : "Affiche un jeu aléatoire de steam",
+            "usage" : "/steam random",
+            "hidden" : false
+        },
+        "/steam search" : {
+            "description" : "Affiche les informations d'un jeu steam",
+            "usage" : "/steam search <name>",
+            "hidden" : false
+        },
+        "/emote add" : {
+            "description" : "Ajoute un emote",
+            "usage" : "/emote add <name> <emoji>",
+            "hidden" : false
+        },
+        "/emote delete" : {
+            "description" : "Supprime un emote",
+            "usage" : "/emote delete <name>",
+            "hidden" : false
+        },
+        "/emote rename" : {
+            "description" : "Renomme un emote",
+            "usage" : "/emote rename <name> <new name>",
+            "hidden" : false
+        },
+        "/emote image" : {
+            "description" : "Affiche l'image d'un emote",
+            "usage" : "/emote image <emoji>",
+            "hidden" : false
+        },
+        "/emote list" : {
+            "description" : "Affiche la liste des emotes",
+            "usage" : "/emote list",
+            "hidden" : false
+        },
+        "/anniv set" : {
+            "description" : "Ajoute ton anniversaire",
+            "usage" : "/anniv set <date>",
+            "hidden" : false
+        },
+        "/anniv delete" : {
+            "description" : "Supprime ta date d'anniversaire",
+            "usage" : "/anniv delete <date>",
+            "hidden" : false
+        },
+        "/anniv show" : {
+            "description" : "Affiche ta date d'anniversaire ou celle d'un utilisateur",
+            "usage" : "/anniv show <user> | /anniv show",
+            "hidden" : false
+        },
+        "/anniv list" : {
+            "description" : "Affiche la liste des anniversaires",
+            "usage" : "/anniv list",
+            "hidden" : false
+        },
+        "/giveaway create" : {
+            "description" : "Crée un giveaway",
+            "usage" : "/giveaway create",
+            "hidden" : false
+        },
+        "/giveaway end" : {
+            "description" : "Avance la fin du giveaway giveaway",
+            "usage" : "/giveaway end",
+            "hidden" : false
+        },
+        "/giveaway cancel" : {
+            "description" : "Annule un giveaway",
+            "usage" : "/giveaway cancel",
+            "hidden" : false
+        },
+        "/giveaway reroll" : {
+            "description" : "Reroll un giveaway",
+            "usage" : "/giveaway reroll",
+            "hidden" : false
+        },
+        "/giveaway count" : {
+            "description" : "Liste les giveaways actif",
+            "usage" : "/giveaway count",
+            "hidden" : false
+        },
+        "/interserveur open" : {
+            "description" : "Lance un code pour un interserveur",
+            "usage" : "/interserveur open",
+            "hidden" : false
+        },
+        "/interserveur join" : {
+            "description" : "Rejoins un interserveur",
+            "usage" : "/interserveur join <code>",
+            "hidden" : false
+        },
+        "/interserveur infos" : {
+            "description" : "Affiche les informations de l'interserveur",
+            "usage" : "/interserveur infos",
+            "hidden" : false
+        },
+        "/vocal private" : {
+            "description" : "Met le vocal en privé [privateroom]",
+            "usage" : "/vocal private",
+            "hidden" : false
+        },
+        "/vocal add" : {
+            "description" : "Ajoute un modérateur au vocal privé",
+            "usage" : "/vocal add <user>",
+            "hidden" : false
+        },
+        "/vocal limit" : {
+            "description" : "Limite le nombre de personne dans le vocal privé",
+            "usage" : "/vocal limit <nombre>",
+            "hidden" : false
+        },
+        "/vocal rename" : {
+            "description" : "Renomme le vocal privé",
+            "usage" : "/vocal rename <name>",
+            "hidden" : false
+        }
+    }
+}
