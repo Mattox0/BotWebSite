@@ -32,6 +32,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $username;
 
+    #[ORM\Column(type: 'string', nullable: true)]
+    private $id_discord;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -57,6 +60,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsername(string $username): self
     {
         $this->username = $username;
+
+        return $this;
+    }
+
+    public function getIdDiscord(): ?string
+    {
+        return $this->id_discord;
+    }
+
+    public function setIdDiscord(string $id_discord): self
+    {
+        $this->id_discord = $id_discord;
 
         return $this;
     }
