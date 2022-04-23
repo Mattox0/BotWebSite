@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-bar-img{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+    border: solid;
+    border-color: #404EED;
+    border-width: 10px;
+    box-shadow: 0 0 20px #23272A;
+}
