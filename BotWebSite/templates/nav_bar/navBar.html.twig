@@ -1,19 +1,12 @@
 
 {% block body %}
 
-<nav class="items-center flex-wrap bg-[#23272A]  p-3 grid grid-cols-3">
-        <div >   
+<nav>
+    <div class="items-center flex-wrap bg-gradient-to-tr from-[#404EED] to-[#4d1284] p-3 grid grid-cols-2 shadow-2xl rounded-b-lg h-24 ">
+        <div>   
             <a href="#" class="justify-start inline-block text-2xl px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-500 hover:bg-white mt-4 lg:mt-0">Inviter</a>
         </div>
 
-        <div class="flex-none">
-            <div class="flex justify-center content-end text-white">
-                <a  href="/home">
-                    <img class="rounded-full border" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
-                </a>
-            </div>
-        </div>
-        
         <div class="text-2xl justify-end w-full block lg:flex lg:items-center lg:w-auto ml-15">
             <a href="dashboard" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
                 Dashboard
@@ -35,6 +28,14 @@
                 
             </a>
         </div>
+    </div>
+    <div class="flex-none">
+        <div class="flex justify-center content-end text-white">
+            <a  href="/home">
+                <img class="rounded-full nav-bar-img" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
+            </a>
+        </div>
+    </div>
 </nav>
 
 {% endblock %}
