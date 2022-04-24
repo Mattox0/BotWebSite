@@ -6,11 +6,15 @@
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 39%);
     justify-content: center;
     height: fit-content;
+    box-shadow: 
+        25px 25px 35px -25px #0e0e10b4,
+        -25px -25px 35px -25px #404048b4,
+        25px 5px 5px -25px #404048b4 inset,
+        -25px 5px 5px -25px #1b1b21b4 inset;
 }
 
 .btn {
-    background-color: #303030;
-    border-color: transparent;
+    background-color: #23272A;
     color: #ccc;
     border-radius: 4px;
     margin-top: 0.5rem;
@@ -18,11 +22,21 @@
     padding-right : 10px;
     padding-top : 5px;
     padding-bottom : 5px;
+    box-shadow: 
+        25px 0 35px -25px #0e0e10b4,
+        -25px 0 35px -25px #404048b4,
+        25px 0 5px -25px #404048b4 inset,
+        -25px 0 5px -25px #1b1b21b4 inset;
 }
 
 .btn.selected {
     background-color: #4340d5;
     color: #fff;
+    box-shadow: 
+        25px 0 35px -25px #0e0e4cde,
+        -25px -5px 35px -25px #8e8ef6d8,
+        25px 5px 5px -25px #8e8ef6d8 inset,
+        -25px 0 5px -25px #0e0e4cde inset;
 }
 
 .command {
@@ -33,6 +47,11 @@
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 39%);
     cursor: pointer;
     margin-bottom: 15px;
+    box-shadow: 
+        25px 25px 35px -25px #0e0e10b4,
+        -25px -25px 35px -25px #404048b4,
+        25px 5px 5px -25px #404048b4 inset,
+        -25px 5px 5px -25px #1b1b21b4 inset;
 }
 
 .cmd {
@@ -62,7 +81,7 @@
 .header {
     margin: -2px 0 -12px;
     font-size: 55px;
-    color: #404EED;
+    color: #4340d5;
     font-family: "Uni Sans","Arial",sans-serif;
     margin-inline-start: 0px;
     margin-inline-end: 0px;

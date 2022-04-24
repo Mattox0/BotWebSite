@@ -17,6 +17,10 @@
         {{ render(controller(
             'App\\Controller\\NavBarController::index',
         )) }}
-        {% block body %}{% endblock %}
+        <div class="grid grid-cols-6">
+            <div class="col-start-2 col-span-4 min-h-screen background-shadow">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
     </body>
 </html>
