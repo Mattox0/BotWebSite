@@ -8,17 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SiteController extends AbstractController
 {
-    #[Route('/site', name: 'site')]
-    public function index(): Response
-    {
-        return $this->render('site/index.html.twig', [
-            'controller_name' => 'SiteController',
-        ]);
-    }
-
     #[Route('/home', name: 'home')]
     public function home(): Response
     {
+        if (!$this->getUser()) {
+            return $this->redirectToRoute('app_login');
+        };
         return $this->render('site/home.html.twig', [
             'title' => "LMT-Bot",
         ]);
