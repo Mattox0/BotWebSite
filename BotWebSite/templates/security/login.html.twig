@@ -10,36 +10,44 @@
 
     {% if app.user %}
         <div class="mb-3">
-            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            Tu es connectés en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <div class="grid place-items-center mt-10">
+        <div class="rounded-3xl shadow-xl bg-blue-500 p-6">
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+            <h1 class="text-white text-center tracking-widest font-bold text-2xl text-sm bold font-sans mb-5">Connexion</h1>
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+            <div>
+                <div class="grid grid-cols-2">
+                    <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                        <h1 class="font-bold text-white text-xl">Email</h1>
+                    </div>
+                    <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                    </div>
+                </div>
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
+                <div class="grid grid-cols-2">
+                    <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                        <h1 class="font-bold text-white text-xl">Mot de passe</h1>
+                    </div>
+                    <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-5">
+                    <div class="col-start-3 col-end-4">
+                        <button type="submit" class="link rounded-md p-3 pb-4 bg-white/30 hover:bg-white/40 mt-5 mb-2 font-bold text-white text-xl ">Valider</button>
+                    </div>
+                </div>
+                <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+                <a class="mb-3 font-weight-normal hover:text-white  text-white/60 p-3" href="/register"> Je n'ai pas de compte </a>
+
+            </div>
         </div>
-    #}
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-    <a class="h3 mb-3 font-weight-normal" href="/register">
-        I don't have account
-    </a>
+    </div>
 </form>
 {% endblock %}

@@ -3,16 +3,61 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.username) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+    <div class="grid place-items-center mt-10">
+        <div class="rounded-3xl shadow-xl bg-blue-500 p-6">
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+            <h1 class="text-white text-center tracking-widest font-bold text-2xl text-sm bold font-sans mb-5">Inscription</h1>
+
+            <div>
+
+                {{ form_start(registrationForm) }}
+
+                    <div class="grid grid-cols-2">
+                        <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                            <h1 class="font-bold text-white text-xl">Email</h1>
+                        </div>
+                        <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                            {{ form_row(registrationForm.email, { label:' '}) }}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2">
+                        <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                            <h1 class="font-bold text-white text-xl">Nom d'utilisateur</h1>
+                        </div>
+                        <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                            {{ form_row(registrationForm.username, { label:' '}) }}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2">
+                        <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                            <h1 class="font-bold text-white text-xl">Mot de passe</h1>
+                        </div>
+                        <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                            {{ form_row(registrationForm.plainPassword, { label:' '}) }}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2">
+                        <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                            <h1 class="font-bold text-white text-xl"> Accepter conditions</h1>
+                        </div>
+                        <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                            {{ form_row(registrationForm.agreeTerms, { label:' '}) }}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-5">
+                        <div class="col-start-3 col-end-4">
+                            <button type="submit" class="link rounded-md p-3 pb-4 bg-white/30 hover:bg-white/40 mt-5 mb-2 font-bold text-white text-xl ">Valider</button>
+                        </div>
+                    </div>
+                {{ form_end(registrationForm) }}
+
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
