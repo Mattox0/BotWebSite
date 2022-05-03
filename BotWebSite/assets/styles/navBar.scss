@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 .nav-bar-img{
+    height: 150px;
+    width: 150px;
+    background: url("../../public/images/logo.png");
+    background-size: cover;
+    animation: glitch 3.75s infinite steps(1);
     position: relative;
     display: block;
     margin-left: auto;
@@ -12,4 +17,55 @@
     border-color: #404EED;
     border-width: 10px;
     box-shadow: 0 0 20px #23272A;
+}
+
+@keyframes glitch {
+    0%,
+    55.1%,
+    100% {
+        background: url("../../public/images/logo.png");
+        background-size: cover;
+    }
+    50% {
+        background: url("../../public/images/glitch-logo-1.png");
+        background-size: cover;
+    }
+    52.5% {
+        background: url("../../public/images/glitch-logo-2.png");
+        background-size: cover;
+    }
+    55% {
+        background: url("../../public/images/glitch-logo-3.png");
+        background-size: cover;
+    }
+}
+
+.nav_link {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 50px;
+    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+    color: #fff;
+}
+
+.nav_link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    background-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.nav_link:hover::before,
+.nav_link:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
 }
