@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block body %}
+<div class="grid place-items-center mt-10">
+    <div class="rounded-3xl overflow-hidden shadow-xl max-w-xs  bg-blue-500">
+        {{ form_start(editForm) }}
+        
+        <div class="text-center px-3 pb-6 pt-2">
+            {# <input class="text-sm bold font-sans" placeholder={{ me.getUsername }}> #}
+
+            {{ form_row(editForm.email, {
+                label: 'Email : '
+            }) }}
+            {{ form_row(editForm.username, {
+                label: "Nom d'utilisateur : "
+            }) }}
+            {{ form_row(editForm.password.first) }}
+            {{ form_row(editForm.password.second) }}
+
+            <div class="flex justify-center pb-3 text-white">
+                <div class="text-center ml-3 mr-3 border-r pr-3">
+                    <button type="submit" >Modifer</button>
+                </div>
+                <div class="text-center border-r mr-3 pr-3">
+                    <a href="profil">
+                        Annuler
+                    </a>
+                </div>
+                <div class="text-center mr-3 pr-3">
+                        Supprimer
+                </div>
+            </div>
+        </div>
+        {{ form_end(editForm) }}
+    </div>
+</div>
+{% endblock %}
+

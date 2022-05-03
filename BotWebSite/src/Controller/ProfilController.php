@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProfilController extends AbstractController
@@ -20,4 +22,20 @@ class ProfilController extends AbstractController
             'me' => $user,
         ]);
     }
+    
+    #[Route("/delete_profil", name:"delete_profil", methods:"GET")]
+    public function suppressionProfil(Request $request, User $user): Response
+    {
+
+        if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($user);
+            $entityManager->flush();
+
+            $this->addFlash('sup', 'Votre compte a bien été supprimée');
+        }
+
+        return $this->redirectToRoute('/');
+    }
+
 }
