@@ -2,37 +2,37 @@
 {% block body %}
 
 <nav>
-    <div class="items-center flex-wrap bg-gradient-to-tr from-[#404EED] to-[#4d1284] p-3 grid grid-cols-2 shadow-2xl rounded-b-lg h-24 ">
+    <div class="items-center flex-wrap bg-gradient-to-tr from-[#404EED] to-[#4d1284] p-3 grid grid-cols-2 shadow-2xl rounded-b-lg h-24">
         <div>   
-            <a href="#" class="justify-start inline-block text-2xl px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-500 hover:bg-white mt-4 lg:mt-0">Inviter</a>
+            <a href="#" class="justify-start inline-block text-2xl px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-500 hover:bg-white mt-4 lg:mt-0 ml-10">Inviter</a>
         </div>
 
-        <div class="text-2xl justify-end w-full block lg:flex lg:items-center lg:w-auto ml-15">
-            <a href="dashboard" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+        <div class="text-2xl justify-end w-full block lg:flex lg:items-center lg:w-auto  mr-10">
+            <a href="dashboard" class="nav_link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
                 Dashboard
             </a>
-            <a href="commands" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+            <a href="commands" class="nav_link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
                 Commandes
             </a>
             
             {% if (name != "") %}
-                <a href="profil" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+                <a href="profil" class="nav_link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
                     {{ name }}
                 </a>
             {% else %}
-                <a href="login" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+                <a href="login" class="nav_link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
                     Connexion
                 </a>
             {% endif %}
-            <a href="faq" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+
+            <!--<a href="faq" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">  </a>-->
                 
-            </a>
         </div>
     </div>
     <div class="flex-none">
         <div class="flex justify-center content-end text-white">
             <a  href="/home">
-                <img class="rounded-full nav-bar-img" src="{{ asset('/images/logo.png') }}" alt="Bot Logo">
+                <div class="rounded-full nav-bar-img" alt="Bot Logo"></div>
             </a>
         </div>
     </div>
