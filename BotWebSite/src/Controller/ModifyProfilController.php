@@ -2,47 +2,48 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\EditProfileType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 class ModifyProfilController extends AbstractController
 {
-    #[Route('/modify_profil', name: 'modify_profil')]
-    public function index(): Response
+    #[Route('/edit_profil', name: 'edit_profil')]
+    public function index(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $manager): Response
     {
-        if (!$this->getUser()) {
-            return $this->redirectToRoute('app_login');
-        }
-        $user = new User();
-        $form = $this->createForm(RegistrationFormType::class, $user);
+        $user=$this->getUser();
+
+        $form = $this->createForm(EditProfileType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // encode the plain password
+
+            $user = $form->getData();
             $user->setPassword(
-            $userPasswordHasher->hashPassword(
+                $userPasswordHasher->hashPassword(
                     $user,
-                    $form->get('plainPassword')->getData()
+                    $form->get('password')->getData()
                 )
             );
 
-            
-
-            $entityManager->persist($user);
-            $entityManager->flush();
-            // do anything else you need here, like send an email
-
-            return $userAuthenticator->authenticateUser(
-                $user,
-                $authenticator,
-                $request
+            $manager->persist($user);
+            $manager->flush();
+            $this->addFlash(
+                'success',
+                'Les informations de votre compte ont bien été modifiées. '
             );
+
+            return $this->redirectToRoute('profil');
         }
 
-        return $this->render('modify_profil/index.html.twig', [
-            'controller_name' => 'ModifyProfilController',
+        return $this->render('profil/editProfil.html.twig', [
             'me' => $user,
+            'editForm' => $form->createView(),
         ]);
     }
 }

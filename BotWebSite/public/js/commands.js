@@ -13,11 +13,8 @@ function handleClick(event) {
 
     let element = event.target;
 
-    // Climb up the document tree from the target of the event
     while (element) {
         if (element.nodeName === "BUTTON" && /categorie/.test(element.className)) {
-            // The user clicked on a <button> or clicked on an element inside a <button>
-            // with a class name called "foo"
             categorie(element);
             break;
         }
@@ -85,7 +82,6 @@ function pagination(button) {
     } else {
         allCommandsView = document.querySelectorAll(`div.command.${selected}`);
     }
-    console.log(allCommandsView);
     if (button.id === 'next') {
         if (currentPage+1 < Math.ceil(allCommandsView.length / 10)) {
             currentPage++;
