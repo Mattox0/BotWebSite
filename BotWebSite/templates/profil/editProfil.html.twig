@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="grid place-items-center mt-10">
-    <div class="rounded-3xl overflow-hidden shadow-xl max-w-xs  bg-blue-500">
+    <div class="rounded-3xl p-6  bg-blue-500">
         {{ form_start(editForm) }}
         
         <div class="text-center px-3 pb-6 pt-2">
@@ -40,7 +40,7 @@
                     }) }}
                 </div>
             </div>
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-2 pb-5">
                 <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
                     <h1 class="font-bold text-white text-xl">Confirmer le mot de passe</h1>
                 </div>
@@ -51,11 +51,11 @@
                 </div>
             </div>
 
-            <div class="flex justify-center pb-3 text-white">
+            <div class="flex justify-center pb-3  text-white">
                 <div class="text-center ml-3 mr-3 border-r pr-3">
                     <button type="submit" >Modifer</button>
                 </div>
-                <div class="text-center border-r mr-3 pr-3">
+                <div class="text-center mr-3">
                     <a href="profil">
                         Annuler
                     </a>
