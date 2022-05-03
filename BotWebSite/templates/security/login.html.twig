@@ -51,3 +51,11 @@
     </div>
 </form>
 {% endblock %}
+                <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+                <a class="mb-3 font-weight-normal hover:text-white  text-white/60 p-3" href="/register"> Je n'ai pas de compte </a>
+
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

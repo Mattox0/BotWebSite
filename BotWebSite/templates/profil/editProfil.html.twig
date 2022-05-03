@@ -10,14 +10,46 @@
         <div class="text-center px-3 pb-6 pt-2">
             {# <input class="text-sm bold font-sans" placeholder={{ me.getUsername }}> #}
 
-            {{ form_row(editForm.email, {
-                label: 'Email : '
-            }) }}
-            {{ form_row(editForm.username, {
-                label: "Nom d'utilisateur : "
-            }) }}
-            {{ form_row(editForm.password.first) }}
-            {{ form_row(editForm.password.second) }}
+            <div class="grid grid-cols-2">
+                <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                    <h1 class="font-bold text-white text-xl">Email</h1>
+                </div>
+                <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                    {{ form_row(editForm.email, {
+                        label: ' '
+                    }) }}
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                    <h1 class="font-bold text-white text-xl">Nom d'utilisateur</h1>
+                </div>
+                <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                    {{ form_row(editForm.username, {
+                        label: ' '
+                    }) }}
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                    <h1 class="font-bold text-white text-xl">Mot de passe</h1>
+                </div>
+                <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                    {{ form_row(editForm.password.first, {
+                        label: ' '
+                    }) }}
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="justify-self-end mr-4 rounded-md col-start-1 col-end-1">
+                    <h1 class="font-bold text-white text-xl">Confirmer le mot de passe</h1>
+                </div>
+                <div class="justify-self-start self-center ml-4 text-left text-slate-300 col-start-2 col-end-2 ">
+                    {{ form_row(editForm.password.second, {
+                        label: ' '
+                    }) }}
+                </div>
+            </div>
 
             <div class="flex justify-center pb-3 text-white">
                 <div class="text-center ml-3 mr-3 border-r pr-3">
@@ -27,9 +59,6 @@
                     <a href="profil">
                         Annuler
                     </a>
-                </div>
-                <div class="text-center mr-3 pr-3">
-                        Supprimer
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 class ProfilController extends AbstractController
 {
@@ -23,18 +24,18 @@ class ProfilController extends AbstractController
         ]);
     }
     
-    #[Route("/delete_profil", name:"delete_profil", methods:"GET")]
-    public function suppressionProfil(Request $request): Response
-    {
-        var_dump($user);
-        var_dump("HEre ");
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($user);
-        $entityManager->flush();
+    // #[Route("/delete_profil", name:"delete_profil", methods:"GET")]
+    // public function suppressionProfil(Request $request): Response
+    // {
+    //     var_dump(getUser());
+    //     var_dump("HEre ");
+    //     // $entityManager = $this->getDoctrine()->getManager();
+    //     // $entityManager->remove($user);
+    //     // $entityManager->flush();
 
-        $this->addFlash('sup', 'Votre compte a bien été supprimée');
+    //     // $this->addFlash('sup', 'Votre compte a bien été supprimée');
 
-        return $this->redirectToRoute('/');
-    }
+    //     // return $this->redirectToRoute('/');
+    // }
 
 }
